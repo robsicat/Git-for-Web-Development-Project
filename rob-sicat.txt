@@ -1,42 +1,193 @@
 https://codepen.io/robsicat/pen/146c2aa2e1c97c1078f7b5f4667ad092?editors=1100
 
-1. What is Semantic HTML? 
-2. What is HTML used for? 
-3. What is an attribute and where do we put it? 
+1. What is Semantic HTML?
+Semantic HTML provides meaning to HTML elements. Semantic HMTL is helpful to the browser (for screen readers), for collaborating with others, and for SEO purposes. 	
+
+
+2. What is HTML used for?
+HTML or hypertext markup language is used to give content to a web page and provide instructions to a web browser to structure the content. In the house analogy, HTML represents the raw materials.
+
+
+3. What is an attribute and where do we put it?
+Attributes provide more information about an element and can be added to the opening tag.
+
+
 4. What is the h1 tag used for? How many times should I use it on a page?
+The h1 tag is used for the main heading on a webpage. There should only be one on a page.
+
+
 5. Name two tags that have required attributes
+<img> (ex: src, alt) <a> (ex: href)
+
+
 6. What do we put in the head of our HTML document? 
+The head of a HTML doc contains metadata/general info about the document like <title>, <style> (for css) and is not displayed on the page.
+
+
 7. What is an id? 
+An ID attribute is a unique identifier that can be used to target specific elements. You should use ids sparingly.
+
+
 8. What elements can I add an id to? 
+You can add an ID to all HTML elements.
+
+
 9. How many times can I use the same id on a page? 
+The id attribute is a unique identifier and can be used once on a page. 
+
+
 10. What is a class? 
+Class is an attribute used to specify a class (or multiple classes) for HTML elements.
+
+
 11. What elements can I add a class to? 
+You can add classes to all HMTL elements.
+
+
 12. How many times can I use the same class on a page? 
+You can reuse the same class repeatedly on a page.
+
+
 13. How do I get my link to open in a new tab?
+With the target attribute. For a new tab, you'll want to use target="_blank"
+
+
 14. What is the alt attribute in the image tag used for? 
+The alt attribute provides alternative information/text for an image. It's helpful for accessibility, in particular people using screen readers.
+
+
 15. How do I reference an id?
+To reference an id in CSS, you use the hash (#) sign.
+
+
 16. What is the difference between a section and a div
+A section is a semantic element used to specify a section on a page. Divs are used as a more generic purpose container for a group of elements.
+
+
 17. What is CSS used for? 
+CSS or cascading style sheets, customizes the look, layout, and styling of HTML elements. In the house analogy, it's the blueprints, layout, and paint. 
+
+
 18. How to we select an element? Example - every h2 on the page
+A couple of different ways to select elements:
+To target a class, use .className.
+To target a id, use #.
+To target all elements, use *.
+
+To target every h2 on a page and change the color, use the following:
+
+h2 {
+ color: #dedede;
+}
+
+
+
 19. What is the difference between a class and an id? - Give me an example of when I might use each one
+The main difference between a class and an id is classes are not unique, and ids are. That means that each element can only have one id, and each page can only have one element with that id. Classes, on the other hand, can be used on multiple elements and on the same element.
+
+
 20. How do we select classes in CSS?
+To select a class, use syntax of period, followed by the class name.
+
+.className {
+  [css]
+}
+
+
 21. How do we select a p element with a single class of “human””?
-22. What is a parent child selector? When would this be useful? 
+.human p {
+  [css]
+}
+
+
+22. What is a parent child selector? When would this be useful?
+A parent-child selector is a way to select element with a specific parent. This is useful if you want to be exact and only match the elements that are direct children of the parent. 
+
+ 
 23. How do you select all links within a div with the class of sidebar?
+.sidebar a:link {
+  [css]
+}
+
+
 24. What is a pseudo selector?
+A pseudo selector is a selector that targets an element in a specific state. A couple of examples: Hover or when an element is in focus.
+
+
 25. What do we use the change the spacing between lines?
+The line-height property.
+
+
+
 26. What do we use to change the spacing between letters?
+The letter-spacing property.
+
+
+
 27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+The text-transform property.
+
+
+
 28. How do I add a 1px border around my div that is dotted and black?
+.className {
+  border: 1px dotted black;
+}
+
+
 29. How do I select everything on the page? 
+Use the universal selector (*) to select everything on a page.
+
+
+
 30. How do I write a comment in CSS?
+Use the following syntax to write a comment in CSS: /* I am a comment */
+
+
+
 31. How do I find out what file I am in, when I am using the command line? 
+$ pwd
+
+
 32. Using the command line - how do I see a list of files/folders in my current folder?
+$ ls 
+
+
 33. How do I remove a file via the command line? Why do I have to be careful with this? 
+$ rm <file> 
+
+You want to be careful with this operation because until an app or GUI, it does not warn you when deleting a file.
+
+
+
 34. Why should I use version control? 
+Modern companies rely on it to collaborate safely and effectively with other stakeholders. Additionally, having an entire history makes it easy to look back and potentially revert to previous versions. Lastly, features like Branching make it easy for developers to work on ideas without interrupting other team members' flow and a safe environment that isn't production.
+
+
 35. How often should I commit to github?
+You should commit often, when there is a new version or logical grouping of code/feature.
+
+
 36. What is the command we would use to push our repo up to github? 
+$ git push -u origin branch-name
+
+
 37. Walk me through Lambda's git flow. 
+ - For starters, you'll want to start by forking a Repo. This essentially means making your own copy
+ - Once you've created your own copy, you'll need to put it on your local machine to be able to work on it. To do that, you'll clone the repo
+ - After cloning the repo, you'll move over to the command line (using the git clone command)
+ - You'll want to navigate into the folder and create your own branch using git checkout -b 'firstname-lastname
+ - For most work, you'll be pushing changes to your own branch
+ - When you've made enough progress, you'll want to add and commit changes
+ - To do that, you'll first type git add .
+ - To make sure it's stage, you can perform a git status command
+ - Followed by git commit -m 'helpful commit message'
+ - To get your changes off your machine and up to Github, use the git push -u origin branch-name command
+ - Navigate back to Github and in the GUI you'll be able to submit a PR
+ - It's important to make sure that you're on your branch and not the main branch
+ - Note: you should not merge your own PR's
+  
+
 
 
 Stretch Questions
